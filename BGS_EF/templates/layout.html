@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title> {% block title %}{% endblock title %} | Examen Final LP3</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header_img">
+                <img src="{% static 'img/untels.png' %}" />
+            </div>
+            <div class="header_text">
+                Universidad Nacional Tecnológica de Lima Sur
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="/inicio">Inicio</a></li>
+                <li><a href="/integrantes">Integrantes</a></li>
+                <li><a href="/crearDocente">Crear docente</a></li>
+                <li><a href="/listarDocentes">Listar docentes</a></li>
+                <li><a href="/crearCurso">Crear curso</a></li>
+                <li><a href="/listarCursos">Listar cursos</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            {% block main %}
+            {% endblock main %}
+        </div>
+    </div>
+    
+</body>
+</html>
