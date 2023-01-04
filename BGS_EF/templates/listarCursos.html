@@ -1,5 +1,18 @@
 {% extends 'layout.html' %}
 {% block title %}Listar cursos{% endblock title %}
 {% block main %}
-  
+    <ul>
+        {% for curso in cursos %}
+            <li>
+                <h4>{{curso.codigo}}.- {{curso.nombre}}</h4>
+                <div>Horas: {{curso.horas}}</div>
+                <div>Creditos: {{curso.creditos}} </div>
+                <div>Fecha de registro: {{curso.Fecha_registro}}</div>
+                <div>Estado: {{curso.estado}} </div>
+                <p>
+                    <a href="{% url 'eliminarCurso' id=curso.id %}">Eliminar curso</a>
+                </p>
+            </li>
+        {% endfor %}
+    </ul>
 {% endblock main %}

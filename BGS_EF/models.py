@@ -11,4 +11,10 @@ class Docente(models.Model):
     Fecha_registro = models.DateTimeField(auto_now_add=True)
     estado = models.CharField(max_length=100)
 
-
+class Curso(models.Model):
+    codigo = models.CharField(max_length=100)
+    nombre = models.CharField(max_length=100)
+    horas = models.CharField(max_length=100)
+    creditos = models.IntegerField()
+    Fecha_registro = models.DateTimeField(auto_now_add=True)
+    estado = models.CharField(max_length=100)

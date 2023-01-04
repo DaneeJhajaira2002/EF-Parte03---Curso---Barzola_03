@@ -23,3 +23,20 @@ class FormDocente(forms.Form):
         label = "Estado"
     )
     
+class FormCurso(forms.Form):
+    codigo = forms.CharField(
+        label = "Codigo"
+    )
+    nombre = forms.CharField(
+        label = "Nombre"
+    )
+    horas = forms.CharField(
+        label = "Horas"
+    )
+    creditos = forms.IntegerField(
+        label = "Creditos"
+    )
+    estado = forms.CharField(
+        label = "Estado"
+    )
+    
