@@ -1,5 +1,18 @@
 {% extends 'layout.html' %}
 {% block title %}Listar docentes{% endblock title %}
 {% block main %}
-  
+    <ul>
+    {% for docente in docentes %}
+        <li>
+            <h4>{{docente.nombre}} {{docente.apellido_paterno}} {{docente.apellido_materno}} </h4>
+            <div>DNI: {{docente.dni}}</div>
+            <div>Fecha de nacimiento: {{docente.Fecha_nacimiento}}</div>
+            <div>Fecha de registro: {{docente.Fecha_registro}}</div>
+            <div>Estado: {{docente.estado}} </div>
+            <p>
+                <a href="{% url 'eliminarDocente' id=docente.id %}">Eliminar docente</a>
+            </p>
+        </li>
+    {% endfor %}
+    </ul>
 {% endblock main %}
